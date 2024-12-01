@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+      }
+
+      #container {
+        width: 100vw;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="run">Run</button>
+    <div class="container">
+      <div id="container"></div>
+    </div>
+    <script type="module">
+      import { insertionSort } from "./algorithms.js";
+
+      const runButton = document.getElementById("run");
+      const container = document.getElementById("container");
+      let nums = [];
+
+      generateArray(10);
+
+      function generateArray(size = 50) {
+        nums = [];
+        for (let i = 0; i < size; i++) {
+          nums.push(Math.floor(Math.random() * 20) + 1);
+        }
+        render();
+      }
+
+      function render(focusIndex) {
+        container.innerHTML = "";
+        for (let i = 0; i < nums.length; i++) {
+          const num = nums[i];
+          const div = document.createElement("div");
+          div.style.width = "64px";
+          div.style.height = `${32 * num}px`;
+          div.style.border = "1px solid black";
+          if (i == focusIndex) {
+            div.style.background = "red";
+          }
+          container.append(div);
+        }
+      }
+
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      runButton.addEventListener("click", () => {
+        insertionSort(nums, async (focusIndex) => {
+          render(focusIndex);
+          await delay(100);
+        });
+      });
+    </script>
+  </body>
+</html>
