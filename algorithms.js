@@ -1,4 +1,4 @@
-export async function insertionSort(nums, callback) {
+async function insertionSort(nums, callback) {
     for (let i = 1; i < nums.length; i++) {
       const key = nums[i];
       let j = i - 1;
@@ -13,7 +13,7 @@ export async function insertionSort(nums, callback) {
     await callback();
 }
 
-export async function mergeSort(nums, callback) {
+async function mergeSort(nums, callback) {
     async function merge(nums, p, q, r) {
         let n_L = q - p;
         let n_R = r - q;
@@ -62,3 +62,5 @@ export async function mergeSort(nums, callback) {
     await sort(nums, p, r);
     await callback();
 }
+
+export { insertionSort, mergeSort };

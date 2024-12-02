@@ -1,154 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
 
-      body {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-      }
+            body {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
 
-      header {
-        padding: 1.5rem 2rem 1.5rem 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+            header {
+                padding: 1.5rem 2rem 1.5rem 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
 
-      .logo {
-        font-size: 2rem;
-      }
+            .logo {
+                font-size: 2rem;
+            }
 
-      .header-right {
-        display: flex;
-        gap: 2rem;
-      }
+            .header-right {
+                display: flex;
+                gap: 2rem;
+            }
 
-      .wrapper {
-        padding: 4rem;
-        display: flex;
-        flex-grow: 1;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-      }
+            .wrapper {
+                padding: 4rem;
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
 
-      .inputs {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5em;
-      }
+            .inputs {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5em;
+            }
 
-      .algorithm-list,
-      .random,
-      .run {
-        height: 1.5rem;
-      }
+            #algorithm-list,
+            #random,
+            #run {
+                height: 1.5rem;
+            }
 
-      .algorithm-list {
-        width: 10rem;
-      }
+            #algorithm-list {
+                width: 10rem;
+            }
 
-      .container {
-        display: flex;
-        flex-grow: 1;
-        align-items: end;
-        justify-content: center;
-      }
+            .container {
+                display: flex;
+                flex-grow: 1;
+                align-items: end;
+                justify-content: center;
+            }
 
-      #container {
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        gap: 0.5rem;
-      }
+            #container {
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                gap: 0.5rem;
+            }
 
-      footer {
-        padding: 1rem;
-        display: flex;
-        justify-content: center;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <a href="#" , class="logo">AlgoVisualizer</a>
-      <div class="header-right">
-        <a href="#">Sorting</a>
-        <a href="#">Path Finding</a>
-      </div>
-    </header>
-    <div class="wrapper">
-      <div class="inputs">
-        <select class="algorithm-list" id="algorithm-list">
-          <option>Insertion Sort</option>
-          <option>Merge Sort</option>
-        </select>
-        <button class="random" id="random">Randomize</button>
-        <button class="run" id="run">Run</button>
-      </div>
-      <div class="container">
-        <div id="container"></div>
-      </div>
-    </div>
-    <footer>Copyright &copy; 2024 Irina Mardhatillah</footer>
-    <script type="module">
-      import { insertionSort, mergeSort } from "./algorithms.js";
+            footer {
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="#" , class="logo">AlgoVisualizer</a>
+            <div class="header-right">
+                <a href="#">Sorting</a>
+                <a href="#">Path Finding</a>
+            </div>
+        </header>
+        <div class="wrapper">
+            <div class="inputs">
+                <select id="algorithm-list">
+                    <option>Insertion Sort</option>
+                    <option>Merge Sort</option>
+                </select>
+                <button id="random">Randomize</button>
+                <button id="run">Run</button>
+            </div>
+            <div class="container">
+                <div id="container"></div>
+            </div>
+        </div>
+        <footer>Copyright &copy; 2024 Irina Mardhatillah</footer>
+        <script type="module">
+            import { insertionSort, mergeSort } from "./algorithms.js";
 
-      const randomButton = document.getElementById("random");
-      const runButton = document.getElementById("run");
-      const container = document.getElementById("container");
-      let nums = [];
+            const selectedAlgorithm =
+                document.getElementById("algorithm-list").value;
+            const randomButton = document.getElementById("random");
+            const runButton = document.getElementById("run");
+            const container = document.getElementById("container");
+            let nums = [];
 
-      generateArray(10);
+            generateArray(10);
 
-      randomButton.addEventListener("click", () => {
-        generateArray(10);
-      });
+            randomButton.addEventListener("click", () => {
+                generateArray(10);
+            });
 
-      function generateArray(size = 50) {
-        nums = [];
-        for (let i = 0; i < size; i++) {
-          nums.push(Math.floor(Math.random() * 20) + 1);
-        }
-        render();
-      }
+            function generateArray(size = 50) {
+                nums = [];
+                for (let i = 0; i < size; i++) {
+                    nums.push(Math.floor(Math.random() * 20) + 1);
+                }
+                render();
+            }
 
-      function render(focusIndex) {
-        container.innerHTML = "";
-        for (let i = 0; i < nums.length; i++) {
-          const num = nums[i];
-          const div = document.createElement("div");
-          div.style.width = "42px";
-          div.style.height = `${18 * num}px`;
-          div.style.border = "1px solid black";
-          if (i == focusIndex) {
-            div.style.background = "purple";
-          }
-          container.append(div);
-        }
-      }
+            function render(focusIndex) {
+                container.innerHTML = "";
+                for (let i = 0; i < nums.length; i++) {
+                    const num = nums[i];
+                    const div = document.createElement("div");
+                    div.style.width = "42px";
+                    div.style.height = `${18 * num}px`;
+                    div.style.border = "1px solid black";
+                    if (i == focusIndex) {
+                        div.style.background = "purple";
+                    }
+                    container.append(div);
+                }
+            }
 
-      function delay(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      }
+            function delay(ms) {
+                return new Promise((resolve) => setTimeout(resolve, ms));
+            }
 
-      runButton.addEventListener("click", () => {
-        mergeSort(nums, async (focusIndex) => {
-          render(focusIndex);
-          await delay(100);
-        });
-      });
-    </script>
-  </body>
+            runButton.addEventListener("click", () => {
+                switch (selectedAlgorithm) {
+                    case "Insertion Sort":
+                        insertionSort(nums, async (focusIndex) => {
+                            render(focusIndex);
+                            await delay(100);
+                        });
+                    case "Merge Sort":
+                        mergeSort(nums, async (focusIndex) => {
+                            render(focusIndex);
+                            await delay(100);
+                        });
+                }
+            });
+        </script>
+    </body>
 </html>
