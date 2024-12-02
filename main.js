@@ -1,4 +1,4 @@
-import { insertionSort, mergeSort, heapSort, quickSort } from "./algorithms.js";
+import { insertionSort, mergeSort, heapSort, quickSort, selectionSort } from "./algorithms.js";
 
 const randomButton = document.getElementById("random");
 const runButton = document.getElementById("run");
@@ -61,6 +61,12 @@ runButton.addEventListener("click", () => {
         break;
         case "Quick Sort":
         quickSort(nums, async (focusIndex) => {
+            render(focusIndex);
+            await delay(200);
+        });
+        break;
+        case "Selection Sort":
+        selectionSort(nums, async (focusIndex) => {
             render(focusIndex);
             await delay(200);
         });

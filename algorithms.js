@@ -170,4 +170,23 @@ async function quickSort(nums, callback) {
 }
 
 
-export { insertionSort, mergeSort, heapSort, quickSort };
+// Selection sort algorithm
+async function selectionSort(nums, callback) {
+    for (let i = 0; i < nums.length; i++) {
+        let min_index = i;
+        for (let j = i; j < nums.length; j++) {
+            if (nums[min_index] > nums[j]) {
+                min_index = j;
+            }
+        }
+        let temp = nums[i];
+        nums[i] = nums[min_index];
+        nums[min_index] = temp;
+        await callback(i);
+        await callback(min_index);
+    }
+    await callback()
+}
+
+
+export { insertionSort, mergeSort, heapSort, quickSort, selectionSort };
