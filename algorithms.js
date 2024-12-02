@@ -132,4 +132,42 @@ async function heapSort(nums, callback) {
     await callback();
 }
 
-export { insertionSort, mergeSort, heapSort };
+
+// Quick sort algorithm
+async function quickSort(nums, callback) {
+    async function partition(nums, p, r) {
+        let x = nums[r - 1];
+        let i = p - 1;
+        for (let j = p; j < r - 1; j++) {
+            if (nums[j] <= x) {
+                i++;
+                let temp = nums[j];
+                nums[j] = nums[i];
+                nums[i] = temp;
+                await callback(j);
+                await callback(i);
+            }
+        }
+        let temp = nums[r - 1];
+        nums[r - 1] = nums[i + 1];
+        nums[i + 1] = temp;
+        await callback(r - 1);
+        await callback(i + 1);
+
+        return i + 1;
+    }
+
+    async function sort(nums, p, r) {
+        if (p < r - 1) {
+            let q = await partition(nums, p, r);
+            await sort(nums, p, q);
+            await sort(nums, q + 1, r);
+        }
+    }
+
+    await sort(nums, 0, nums.length);
+    await callback();
+}
+
+
+export { insertionSort, mergeSort, heapSort, quickSort };
