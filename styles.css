@@ -1,0 +1,73 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.header-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.wrapper {
+    padding: 4rem;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+#algorithm-list,
+#random,
+#run {
+    height: 1.5rem;
+}
+
+#algorithm-list {
+    width: 10rem;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    align-items: end;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
