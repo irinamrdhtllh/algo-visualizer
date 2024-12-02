@@ -25,8 +25,17 @@ header {
 
 .header-right {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav {
     font-size: 16px;
+}
+
+.fa-github {
+    text-decoration: none;
+    font-size: 22px !important;
 }
 
 .wrapper {
@@ -49,7 +58,7 @@ header {
 #random,
 #run {
     height: 1.5rem;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 #algorithm-list {
