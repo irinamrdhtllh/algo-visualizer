@@ -20,9 +20,11 @@ function render(focusIndex) {
         const div = document.createElement("div");
         div.style.width = "42px";
         div.style.height = `${18 * num}px`;
-        div.style.border = "1px solid black";
+        div.style.border = "1px solid #5CC0BC";
         if (i == focusIndex) {
-        div.style.background = "purple";
+            div.style.background = "#5CC0BC";
+        } else {
+            div.style.background = "white";
         }
         container.append(div);
     }
