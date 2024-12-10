@@ -1,4 +1,4 @@
-import { insertionSort, mergeSort, heapSort, quickSort, selectionSort } from "./algorithms.js";
+import { insertionSort, mergeSort, heapSort, quickSort, selectionSort } from "./sorting_algorithms.js";
 
 const randomButton = document.getElementById("random");
 const runButton = document.getElementById("run");
