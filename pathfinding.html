@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AlgoVisualizer</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+    <body>
+        <header>
+            <a href="#" , class="logo">AlgoVisualizer</a>
+            <div class="header-right">
+                <a href="sorting.html" class="nav">Sorting</a>
+                <a href="pathfinding.html" class="nav">Pathfinding</a>
+                <a
+                    href="https://github.com/irinamrdhtllh/algo-visualizer"
+                    class="fa fa-github"
+                ></a>
+            </div>
+        </header>
+        <div class="wrapper">
+            <div class="inputs">
+                <select id="algorithm-list">
+                    <option value="Breath-First Search">
+                        Breath-First Search
+                    </option>
+                    <option value="Depth-First Search">
+                        Depth-First Search
+                    </option>
+                    <option value="Dijkstra">Dijkstra</option>
+                    <option value="A* Search">A* Search</option>
+                </select>
+                <button id="random" class="fa fa-random"></button>
+                <button id="run" class="fa fa-play"></button>
+            </div>
+            <div class="container">
+                <div id="grid-container">
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                    <div id="grid-row">
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                        <div id="grid-item"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>Copyright &copy; 2024 Irina Mardhatillah</footer>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
