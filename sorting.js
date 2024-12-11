@@ -5,10 +5,10 @@ const runButton = document.getElementById("run");
 const container = document.getElementById("container");
 let nums = [];
 
-function generateArray(size = 50) {
+function generateArray(size = 15) {
     nums = [];
     for (let i = 0; i < size; i++) {
-        nums.push(Math.floor(Math.random() * 20) + 1);
+        nums.push(Math.floor((Math.random() * (1 - 0.1) + 0.1) * 20) + 1);
     }
     render();
 }
@@ -35,7 +35,7 @@ function delay(ms) {
 }
 
 randomButton.addEventListener("click", () => {
-    generateArray(10);
+    generateArray();
 });
 
 runButton.addEventListener("click", () => {
@@ -76,4 +76,4 @@ runButton.addEventListener("click", () => {
     }
 });
 
-generateArray(10);
+generateArray();
