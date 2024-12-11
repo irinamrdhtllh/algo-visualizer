@@ -3,7 +3,8 @@ async function BFS(source, goal, neighbors, callback) {
     let visited = {};
     let predecessor = {};
 
-    visited[source] = true
+    visited[source] = true;
+    await callback(source);
     
     let queue = [];
     queue.push(source);

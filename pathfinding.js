@@ -3,12 +3,15 @@ import { BFS } from './pathfinding_algorithms.js';
 const nRow = 15;
 const nCol = 35;
 
+const sourceId = "7-5";
+const goalId = "7-29";
+
 const randomButton = document.getElementById("random");
 const runButton = document.getElementById("run");
 
 let walls = []
 
-function generateWalls(nums = 100) {
+function generateWalls(nums = 150) {
     walls.forEach(cell => {
         cell.classList.replace("wall", "unvisited");
     })
@@ -35,9 +38,15 @@ function generateWalls(nums = 100) {
     }
 }
 
-function render(currentCell) {
-    let cell = document.getElementById(currentCell)
-    cell.classList.replace("unvisited", "visited");
+function render(currentId) {
+    let currentCell = document.getElementById(currentId);
+    if (currentId == sourceId) {
+        currentCell.classList.replace("source", "visited");
+    } else if (currentId == goalId) {
+        currentCell.classList.replace("goal", "visited")
+    } else {
+        currentCell.classList.replace("unvisited", "visited");
+    }
 }
 
 function delay(ms) {
@@ -69,51 +78,28 @@ randomButton.addEventListener("click", () => {
 runButton.addEventListener("click", async () => {
     const selectedAlgorithm = document.getElementById("algorithm-list").value;
     let predecessor;
-    let source = "7-5";
-    let goal = "7-29";
 
     switch (selectedAlgorithm) {
         case "Breadth-First Search":
-            predecessor = await BFS(source, goal, getNeighbors, async (currentCell) => {
+            predecessor = await BFS(sourceId, goalId, getNeighbors, async (currentCell) => {
                 render(currentCell);
                 await delay(20);
             })
         break
     }
 
-    async function renderPath(source, current) {
-        let sourceCell = document.getElementById(source);
-        let currentCell = document.getElementById(current);
-        if (current == source) {
-            sourceCell.classList.replace("visited", "path");
+    async function renderPath(currentId) {
+        let currentCell = document.getElementById(currentId);
+        if (currentId === sourceId) {
+            currentCell.classList.replace("visited", "path");
         } else {
-            await renderPath(source, predecessor[current]);
+            await renderPath(predecessor[currentId]);
             currentCell.classList.replace("visited", "path");
         }
         await delay(20);
     }
 
-    await renderPath(source, goal);
+    await renderPath(goalId);
 })
 
 generateWalls();
-
-// let graph = {
-//     1: [2, 4],
-//     2: [5],
-//     3: [6, 5],
-//     4: [2],
-//     5: [4],
-//     6: [6]
-// }
-
-// let weight = {
-//     1: {2: 1, 4: 1},
-//     2: {5: 1},
-//     3: {6: 1, 5: 1},
-//     4: {2: 1},
-//     5: {4: 1},
-//     6: {6: 1}
-// }
-
-// BFS(graph, 1, 5);
