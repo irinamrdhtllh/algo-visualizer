@@ -136,19 +136,16 @@ select::after {
 .wall {
     height: 1.5rem;
     width: 1.5rem;
+    line-height: 1.5rem !important;
+    text-align: center;
 }
 
 .unvisited,
+.visited,
 .source,
-.goal {
-    background-color: white;
+.goal,
+.path {
     border: 1px solid #5CC0BC;
-}
-
-.source,
-.goal {
-    line-height: 1.5rem !important;
-    text-align: center;
 }
 
 .wall {
@@ -156,14 +153,18 @@ select::after {
     border: 1px solid #253237;
 }
 
+.source,
+.goal,
+.unvisited {
+    background-color: white;
+}
+
 .visited {
-    background-color: #5CC0BC;
-    border: 1px solid #253237;
+    background-color: #BDE4E3;
 }
 
 .path {
-    background-color: purple;
-    border: 1px solid #253237;
+    background-color: #5CC0BC;
 }
 
 .fa-chevron-right,
