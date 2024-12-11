@@ -129,17 +129,19 @@ select::after {
 }
 
 .unvisited,
+.visited,
 .source,
 .goal,
+.path,
 .wall {
     height: 1.5rem;
     width: 1.5rem;
-    background-color: white;
 }
 
 .unvisited,
 .source,
 .goal {
+    background-color: white;
     border: 1px solid #5CC0BC;
 }
 
@@ -154,6 +156,16 @@ select::after {
     border: 1px solid #253237;
 }
 
+.visited {
+    background-color: #5CC0BC;
+    border: 1px solid #253237;
+}
+
+.path {
+    background-color: purple;
+    border: 1px solid #253237;
+}
+
 .fa-chevron-right,
 .fa-dot-circle-o {
     margin: 0;
@@ -163,6 +175,8 @@ select::after {
 }
 
 .unvisited:not(:first-child),
+.visited:not(:first-child),
+.path:not(:first-child),
 .source:not(:first-child),
 .goal:not(:first-child),
 .wall:not(:first-child) {
