@@ -31,7 +31,7 @@
                     <option value="Depth-First Search">
                         Depth-First Search
                     </option>
-                    <option value="Dijkstra">Dijkstra</option>
+                    <option value="Dijkstra">Dijkstra's Algorithm</option>
                     <option value="A* Search">A* Search</option>
                 </select>
                 <button id="random" class="fa fa-random"></button>
@@ -39,362 +39,565 @@
             </div>
             <div class="container">
                 <div id="grid-container">
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" , id="0">
+                        <div class="unvisited" id="0-0"></div>
+                        <div class="unvisited" id="0-1"></div>
+                        <div class="unvisited" id="0-2"></div>
+                        <div class="unvisited" id="0-3"></div>
+                        <div class="unvisited" id="0-4"></div>
+                        <div class="unvisited" id="0-5"></div>
+                        <div class="unvisited" id="0-6"></div>
+                        <div class="unvisited" id="0-7"></div>
+                        <div class="unvisited" id="0-8"></div>
+                        <div class="unvisited" id="0-9"></div>
+                        <div class="unvisited" id="0-10"></div>
+                        <div class="unvisited" id="0-11"></div>
+                        <div class="unvisited" id="0-12"></div>
+                        <div class="unvisited" id="0-13"></div>
+                        <div class="unvisited" id="0-14"></div>
+                        <div class="unvisited" id="0-15"></div>
+                        <div class="unvisited" id="0-16"></div>
+                        <div class="unvisited" id="0-17"></div>
+                        <div class="unvisited" id="0-18"></div>
+                        <div class="unvisited" id="0-19"></div>
+                        <div class="unvisited" id="0-20"></div>
+                        <div class="unvisited" id="0-21"></div>
+                        <div class="unvisited" id="0-22"></div>
+                        <div class="unvisited" id="0-23"></div>
+                        <div class="unvisited" id="0-24"></div>
+                        <div class="unvisited" id="0-25"></div>
+                        <div class="unvisited" id="0-26"></div>
+                        <div class="unvisited" id="0-27"></div>
+                        <div class="unvisited" id="0-28"></div>
+                        <div class="unvisited" id="0-29"></div>
+                        <div class="unvisited" id="0-30"></div>
+                        <div class="unvisited" id="0-31"></div>
+                        <div class="unvisited" id="0-32"></div>
+                        <div class="unvisited" id="0-33"></div>
+                        <div class="unvisited" id="0-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="1">
+                        <div class="unvisited" id="1-0"></div>
+                        <div class="unvisited" id="1-1"></div>
+                        <div class="unvisited" id="1-2"></div>
+                        <div class="unvisited" id="1-3"></div>
+                        <div class="unvisited" id="1-4"></div>
+                        <div class="unvisited" id="1-5"></div>
+                        <div class="unvisited" id="1-6"></div>
+                        <div class="unvisited" id="1-7"></div>
+                        <div class="unvisited" id="1-8"></div>
+                        <div class="unvisited" id="1-9"></div>
+                        <div class="unvisited" id="1-10"></div>
+                        <div class="unvisited" id="1-11"></div>
+                        <div class="unvisited" id="1-12"></div>
+                        <div class="unvisited" id="1-13"></div>
+                        <div class="unvisited" id="1-14"></div>
+                        <div class="unvisited" id="1-15"></div>
+                        <div class="unvisited" id="1-16"></div>
+                        <div class="unvisited" id="1-17"></div>
+                        <div class="unvisited" id="1-18"></div>
+                        <div class="unvisited" id="1-19"></div>
+                        <div class="unvisited" id="1-20"></div>
+                        <div class="unvisited" id="1-21"></div>
+                        <div class="unvisited" id="1-22"></div>
+                        <div class="unvisited" id="1-23"></div>
+                        <div class="unvisited" id="1-24"></div>
+                        <div class="unvisited" id="1-25"></div>
+                        <div class="unvisited" id="1-26"></div>
+                        <div class="unvisited" id="1-27"></div>
+                        <div class="unvisited" id="1-28"></div>
+                        <div class="unvisited" id="1-29"></div>
+                        <div class="unvisited" id="1-30"></div>
+                        <div class="unvisited" id="1-31"></div>
+                        <div class="unvisited" id="1-32"></div>
+                        <div class="unvisited" id="1-33"></div>
+                        <div class="unvisited" id="1-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="2">
+                        <div class="unvisited" id="2-0"></div>
+                        <div class="unvisited" id="2-1"></div>
+                        <div class="unvisited" id="2-2"></div>
+                        <div class="unvisited" id="2-3"></div>
+                        <div class="unvisited" id="2-4"></div>
+                        <div class="unvisited" id="2-5"></div>
+                        <div class="unvisited" id="2-6"></div>
+                        <div class="unvisited" id="2-7"></div>
+                        <div class="unvisited" id="2-8"></div>
+                        <div class="unvisited" id="2-9"></div>
+                        <div class="unvisited" id="2-10"></div>
+                        <div class="unvisited" id="2-11"></div>
+                        <div class="unvisited" id="2-12"></div>
+                        <div class="unvisited" id="2-13"></div>
+                        <div class="unvisited" id="2-14"></div>
+                        <div class="unvisited" id="2-15"></div>
+                        <div class="unvisited" id="2-16"></div>
+                        <div class="unvisited" id="2-17"></div>
+                        <div class="unvisited" id="2-18"></div>
+                        <div class="unvisited" id="2-19"></div>
+                        <div class="unvisited" id="2-20"></div>
+                        <div class="unvisited" id="2-21"></div>
+                        <div class="unvisited" id="2-22"></div>
+                        <div class="unvisited" id="2-23"></div>
+                        <div class="unvisited" id="2-24"></div>
+                        <div class="unvisited" id="2-25"></div>
+                        <div class="unvisited" id="2-26"></div>
+                        <div class="unvisited" id="2-27"></div>
+                        <div class="unvisited" id="2-28"></div>
+                        <div class="unvisited" id="2-29"></div>
+                        <div class="unvisited" id="2-30"></div>
+                        <div class="unvisited" id="2-31"></div>
+                        <div class="unvisited" id="2-32"></div>
+                        <div class="unvisited" id="2-33"></div>
+                        <div class="unvisited" id="2-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="3">
+                        <div class="unvisited" id="3-0"></div>
+                        <div class="unvisited" id="3-1"></div>
+                        <div class="unvisited" id="3-2"></div>
+                        <div class="unvisited" id="3-3"></div>
+                        <div class="unvisited" id="3-4"></div>
+                        <div class="unvisited" id="3-5"></div>
+                        <div class="unvisited" id="3-6"></div>
+                        <div class="unvisited" id="3-7"></div>
+                        <div class="unvisited" id="3-8"></div>
+                        <div class="unvisited" id="3-9"></div>
+                        <div class="unvisited" id="3-10"></div>
+                        <div class="unvisited" id="3-11"></div>
+                        <div class="unvisited" id="3-12"></div>
+                        <div class="unvisited" id="3-13"></div>
+                        <div class="unvisited" id="3-14"></div>
+                        <div class="unvisited" id="3-15"></div>
+                        <div class="unvisited" id="3-16"></div>
+                        <div class="unvisited" id="3-17"></div>
+                        <div class="unvisited" id="3-18"></div>
+                        <div class="unvisited" id="3-19"></div>
+                        <div class="unvisited" id="3-20"></div>
+                        <div class="unvisited" id="3-21"></div>
+                        <div class="unvisited" id="3-22"></div>
+                        <div class="unvisited" id="3-23"></div>
+                        <div class="unvisited" id="3-24"></div>
+                        <div class="unvisited" id="3-25"></div>
+                        <div class="unvisited" id="3-26"></div>
+                        <div class="unvisited" id="3-27"></div>
+                        <div class="unvisited" id="3-28"></div>
+                        <div class="unvisited" id="3-29"></div>
+                        <div class="unvisited" id="3-30"></div>
+                        <div class="unvisited" id="3-31"></div>
+                        <div class="unvisited" id="3-32"></div>
+                        <div class="unvisited" id="3-33"></div>
+                        <div class="unvisited" id="3-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="4">
+                        <div class="unvisited" id="4-0"></div>
+                        <div class="unvisited" id="4-1"></div>
+                        <div class="unvisited" id="4-2"></div>
+                        <div class="unvisited" id="4-3"></div>
+                        <div class="unvisited" id="4-4"></div>
+                        <div class="unvisited" id="4-5"></div>
+                        <div class="unvisited" id="4-6"></div>
+                        <div class="unvisited" id="4-7"></div>
+                        <div class="unvisited" id="4-8"></div>
+                        <div class="unvisited" id="4-9"></div>
+                        <div class="unvisited" id="4-10"></div>
+                        <div class="unvisited" id="4-11"></div>
+                        <div class="unvisited" id="4-12"></div>
+                        <div class="unvisited" id="4-13"></div>
+                        <div class="unvisited" id="4-14"></div>
+                        <div class="unvisited" id="4-15"></div>
+                        <div class="unvisited" id="4-16"></div>
+                        <div class="unvisited" id="4-17"></div>
+                        <div class="unvisited" id="4-18"></div>
+                        <div class="unvisited" id="4-19"></div>
+                        <div class="unvisited" id="4-20"></div>
+                        <div class="unvisited" id="4-21"></div>
+                        <div class="unvisited" id="4-22"></div>
+                        <div class="unvisited" id="4-23"></div>
+                        <div class="unvisited" id="4-24"></div>
+                        <div class="unvisited" id="4-25"></div>
+                        <div class="unvisited" id="4-26"></div>
+                        <div class="unvisited" id="4-27"></div>
+                        <div class="unvisited" id="4-28"></div>
+                        <div class="unvisited" id="4-29"></div>
+                        <div class="unvisited" id="4-30"></div>
+                        <div class="unvisited" id="4-31"></div>
+                        <div class="unvisited" id="4-32"></div>
+                        <div class="unvisited" id="4-33"></div>
+                        <div class="unvisited" id="4-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="5">
+                        <div class="unvisited" id="5-0"></div>
+                        <div class="unvisited" id="5-1"></div>
+                        <div class="unvisited" id="5-2"></div>
+                        <div class="unvisited" id="5-3"></div>
+                        <div class="unvisited" id="5-4"></div>
+                        <div class="unvisited" id="5-5"></div>
+                        <div class="unvisited" id="5-6"></div>
+                        <div class="unvisited" id="5-7"></div>
+                        <div class="unvisited" id="5-8"></div>
+                        <div class="unvisited" id="5-9"></div>
+                        <div class="unvisited" id="5-10"></div>
+                        <div class="unvisited" id="5-11"></div>
+                        <div class="unvisited" id="5-12"></div>
+                        <div class="unvisited" id="5-13"></div>
+                        <div class="unvisited" id="5-14"></div>
+                        <div class="unvisited" id="5-15"></div>
+                        <div class="unvisited" id="5-16"></div>
+                        <div class="unvisited" id="5-17"></div>
+                        <div class="unvisited" id="5-18"></div>
+                        <div class="unvisited" id="5-19"></div>
+                        <div class="unvisited" id="5-20"></div>
+                        <div class="unvisited" id="5-21"></div>
+                        <div class="unvisited" id="5-22"></div>
+                        <div class="unvisited" id="5-23"></div>
+                        <div class="unvisited" id="5-24"></div>
+                        <div class="unvisited" id="5-25"></div>
+                        <div class="unvisited" id="5-26"></div>
+                        <div class="unvisited" id="5-27"></div>
+                        <div class="unvisited" id="5-28"></div>
+                        <div class="unvisited" id="5-29"></div>
+                        <div class="unvisited" id="5-30"></div>
+                        <div class="unvisited" id="5-31"></div>
+                        <div class="unvisited" id="5-32"></div>
+                        <div class="unvisited" id="5-33"></div>
+                        <div class="unvisited" id="5-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="6">
+                        <div class="unvisited" id="6-0"></div>
+                        <div class="unvisited" id="6-1"></div>
+                        <div class="unvisited" id="6-2"></div>
+                        <div class="unvisited" id="6-3"></div>
+                        <div class="unvisited" id="6-4"></div>
+                        <div class="unvisited" id="6-5"></div>
+                        <div class="unvisited" id="6-6"></div>
+                        <div class="unvisited" id="6-7"></div>
+                        <div class="unvisited" id="6-8"></div>
+                        <div class="unvisited" id="6-9"></div>
+                        <div class="unvisited" id="6-10"></div>
+                        <div class="unvisited" id="6-11"></div>
+                        <div class="unvisited" id="6-12"></div>
+                        <div class="unvisited" id="6-13"></div>
+                        <div class="unvisited" id="6-14"></div>
+                        <div class="unvisited" id="6-15"></div>
+                        <div class="unvisited" id="6-16"></div>
+                        <div class="unvisited" id="6-17"></div>
+                        <div class="unvisited" id="6-18"></div>
+                        <div class="unvisited" id="6-19"></div>
+                        <div class="unvisited" id="6-20"></div>
+                        <div class="unvisited" id="6-21"></div>
+                        <div class="unvisited" id="6-22"></div>
+                        <div class="unvisited" id="6-23"></div>
+                        <div class="unvisited" id="6-24"></div>
+                        <div class="unvisited" id="6-25"></div>
+                        <div class="unvisited" id="6-26"></div>
+                        <div class="unvisited" id="6-27"></div>
+                        <div class="unvisited" id="6-28"></div>
+                        <div class="unvisited" id="6-29"></div>
+                        <div class="unvisited" id="6-30"></div>
+                        <div class="unvisited" id="6-31"></div>
+                        <div class="unvisited" id="6-32"></div>
+                        <div class="unvisited" id="6-33"></div>
+                        <div class="unvisited" id="6-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="7">
+                        <div class="unvisited" id="7-0"></div>
+                        <div class="unvisited" id="7-1"></div>
+                        <div class="unvisited" id="7-2"></div>
+                        <div class="unvisited" id="7-3"></div>
+                        <div class="unvisited" id="7-4"></div>
+                        <div class="source fa fa-chevron-right" id="7-5"></div>
+                        <div class="unvisited" id="7-6"></div>
+                        <div class="unvisited" id="7-7"></div>
+                        <div class="unvisited" id="7-8"></div>
+                        <div class="unvisited" id="7-9"></div>
+                        <div class="unvisited" id="7-10"></div>
+                        <div class="unvisited" id="7-11"></div>
+                        <div class="unvisited" id="7-12"></div>
+                        <div class="unvisited" id="7-13"></div>
+                        <div class="unvisited" id="7-14"></div>
+                        <div class="unvisited" id="7-15"></div>
+                        <div class="unvisited" id="7-16"></div>
+                        <div class="unvisited" id="7-17"></div>
+                        <div class="unvisited" id="7-18"></div>
+                        <div class="unvisited" id="7-19"></div>
+                        <div class="unvisited" id="7-20"></div>
+                        <div class="unvisited" id="7-21"></div>
+                        <div class="unvisited" id="7-22"></div>
+                        <div class="unvisited" id="7-23"></div>
+                        <div class="unvisited" id="7-24"></div>
+                        <div class="unvisited" id="7-25"></div>
+                        <div class="unvisited" id="7-26"></div>
+                        <div class="unvisited" id="7-27"></div>
+                        <div class="unvisited" id="7-28"></div>
+                        <div class="goal fa fa-dot-circle-o" id="7-29"></div>
+                        <div class="unvisited" id="7-30"></div>
+                        <div class="unvisited" id="7-31"></div>
+                        <div class="unvisited" id="7-32"></div>
+                        <div class="unvisited" id="7-33"></div>
+                        <div class="unvisited" id="7-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="8">
+                        <div class="unvisited" id="8-0"></div>
+                        <div class="unvisited" id="8-1"></div>
+                        <div class="unvisited" id="8-2"></div>
+                        <div class="unvisited" id="8-3"></div>
+                        <div class="unvisited" id="8-4"></div>
+                        <div class="unvisited" id="8-5"></div>
+                        <div class="unvisited" id="8-6"></div>
+                        <div class="unvisited" id="8-7"></div>
+                        <div class="unvisited" id="8-8"></div>
+                        <div class="unvisited" id="8-9"></div>
+                        <div class="unvisited" id="8-10"></div>
+                        <div class="unvisited" id="8-11"></div>
+                        <div class="unvisited" id="8-12"></div>
+                        <div class="unvisited" id="8-13"></div>
+                        <div class="unvisited" id="8-14"></div>
+                        <div class="unvisited" id="8-15"></div>
+                        <div class="unvisited" id="8-16"></div>
+                        <div class="unvisited" id="8-17"></div>
+                        <div class="unvisited" id="8-18"></div>
+                        <div class="unvisited" id="8-19"></div>
+                        <div class="unvisited" id="8-20"></div>
+                        <div class="unvisited" id="8-21"></div>
+                        <div class="unvisited" id="8-22"></div>
+                        <div class="unvisited" id="8-23"></div>
+                        <div class="unvisited" id="8-24"></div>
+                        <div class="unvisited" id="8-25"></div>
+                        <div class="unvisited" id="8-26"></div>
+                        <div class="unvisited" id="8-27"></div>
+                        <div class="unvisited" id="8-28"></div>
+                        <div class="unvisited" id="8-29"></div>
+                        <div class="unvisited" id="8-30"></div>
+                        <div class="unvisited" id="8-31"></div>
+                        <div class="unvisited" id="8-32"></div>
+                        <div class="unvisited" id="8-33"></div>
+                        <div class="unvisited" id="8-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="9">
+                        <div class="unvisited" id="9-0"></div>
+                        <div class="unvisited" id="9-1"></div>
+                        <div class="unvisited" id="9-2"></div>
+                        <div class="unvisited" id="9-3"></div>
+                        <div class="unvisited" id="9-4"></div>
+                        <div class="unvisited" id="9-5"></div>
+                        <div class="unvisited" id="9-6"></div>
+                        <div class="unvisited" id="9-7"></div>
+                        <div class="unvisited" id="9-8"></div>
+                        <div class="unvisited" id="9-9"></div>
+                        <div class="unvisited" id="9-10"></div>
+                        <div class="unvisited" id="9-11"></div>
+                        <div class="unvisited" id="9-12"></div>
+                        <div class="unvisited" id="9-13"></div>
+                        <div class="unvisited" id="9-14"></div>
+                        <div class="unvisited" id="9-15"></div>
+                        <div class="unvisited" id="9-16"></div>
+                        <div class="unvisited" id="9-17"></div>
+                        <div class="unvisited" id="9-18"></div>
+                        <div class="unvisited" id="9-19"></div>
+                        <div class="unvisited" id="9-20"></div>
+                        <div class="unvisited" id="9-21"></div>
+                        <div class="unvisited" id="9-22"></div>
+                        <div class="unvisited" id="9-23"></div>
+                        <div class="unvisited" id="9-24"></div>
+                        <div class="unvisited" id="9-25"></div>
+                        <div class="unvisited" id="9-26"></div>
+                        <div class="unvisited" id="9-27"></div>
+                        <div class="unvisited" id="9-28"></div>
+                        <div class="unvisited" id="9-29"></div>
+                        <div class="unvisited" id="9-30"></div>
+                        <div class="unvisited" id="9-31"></div>
+                        <div class="unvisited" id="9-32"></div>
+                        <div class="unvisited" id="9-33"></div>
+                        <div class="unvisited" id="9-34"></div>
                     </div>
-                    <div id="grid-row">
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
-                        <div id="grid-item"></div>
+                    <div class="row" id="10">
+                        <div class="unvisited" id="10-0"></div>
+                        <div class="unvisited" id="10-1"></div>
+                        <div class="unvisited" id="10-2"></div>
+                        <div class="unvisited" id="10-3"></div>
+                        <div class="unvisited" id="10-4"></div>
+                        <div class="unvisited" id="10-5"></div>
+                        <div class="unvisited" id="10-6"></div>
+                        <div class="unvisited" id="10-7"></div>
+                        <div class="unvisited" id="10-8"></div>
+                        <div class="unvisited" id="10-9"></div>
+                        <div class="unvisited" id="10-10"></div>
+                        <div class="unvisited" id="10-11"></div>
+                        <div class="unvisited" id="10-12"></div>
+                        <div class="unvisited" id="10-13"></div>
+                        <div class="unvisited" id="10-14"></div>
+                        <div class="unvisited" id="10-15"></div>
+                        <div class="unvisited" id="10-16"></div>
+                        <div class="unvisited" id="10-17"></div>
+                        <div class="unvisited" id="10-18"></div>
+                        <div class="unvisited" id="10-19"></div>
+                        <div class="unvisited" id="10-20"></div>
+                        <div class="unvisited" id="10-21"></div>
+                        <div class="unvisited" id="10-22"></div>
+                        <div class="unvisited" id="10-23"></div>
+                        <div class="unvisited" id="10-24"></div>
+                        <div class="unvisited" id="10-25"></div>
+                        <div class="unvisited" id="10-26"></div>
+                        <div class="unvisited" id="10-27"></div>
+                        <div class="unvisited" id="10-28"></div>
+                        <div class="unvisited" id="10-29"></div>
+                        <div class="unvisited" id="10-30"></div>
+                        <div class="unvisited" id="10-31"></div>
+                        <div class="unvisited" id="10-32"></div>
+                        <div class="unvisited" id="10-33"></div>
+                        <div class="unvisited" id="10-34"></div>
+                    </div>
+                    <div class="row" id="11">
+                        <div class="unvisited" id="11-0"></div>
+                        <div class="unvisited" id="11-1"></div>
+                        <div class="unvisited" id="11-2"></div>
+                        <div class="unvisited" id="11-3"></div>
+                        <div class="unvisited" id="11-4"></div>
+                        <div class="unvisited" id="11-5"></div>
+                        <div class="unvisited" id="11-6"></div>
+                        <div class="unvisited" id="11-7"></div>
+                        <div class="unvisited" id="11-8"></div>
+                        <div class="unvisited" id="11-9"></div>
+                        <div class="unvisited" id="11-10"></div>
+                        <div class="unvisited" id="11-11"></div>
+                        <div class="unvisited" id="11-12"></div>
+                        <div class="unvisited" id="11-13"></div>
+                        <div class="unvisited" id="11-14"></div>
+                        <div class="unvisited" id="11-15"></div>
+                        <div class="unvisited" id="11-16"></div>
+                        <div class="unvisited" id="11-17"></div>
+                        <div class="unvisited" id="11-18"></div>
+                        <div class="unvisited" id="11-19"></div>
+                        <div class="unvisited" id="11-20"></div>
+                        <div class="unvisited" id="11-21"></div>
+                        <div class="unvisited" id="11-22"></div>
+                        <div class="unvisited" id="11-23"></div>
+                        <div class="unvisited" id="11-24"></div>
+                        <div class="unvisited" id="11-25"></div>
+                        <div class="unvisited" id="11-26"></div>
+                        <div class="unvisited" id="11-27"></div>
+                        <div class="unvisited" id="11-28"></div>
+                        <div class="unvisited" id="11-29"></div>
+                        <div class="unvisited" id="11-30"></div>
+                        <div class="unvisited" id="11-31"></div>
+                        <div class="unvisited" id="11-32"></div>
+                        <div class="unvisited" id="11-33"></div>
+                        <div class="unvisited" id="11-34"></div>
+                    </div>
+                    <div class="row" id="12">
+                        <div class="unvisited" id="12-0"></div>
+                        <div class="unvisited" id="12-1"></div>
+                        <div class="unvisited" id="12-2"></div>
+                        <div class="unvisited" id="12-3"></div>
+                        <div class="unvisited" id="12-4"></div>
+                        <div class="unvisited" id="12-5"></div>
+                        <div class="unvisited" id="12-6"></div>
+                        <div class="unvisited" id="12-7"></div>
+                        <div class="unvisited" id="12-8"></div>
+                        <div class="unvisited" id="12-9"></div>
+                        <div class="unvisited" id="12-10"></div>
+                        <div class="unvisited" id="12-11"></div>
+                        <div class="unvisited" id="12-12"></div>
+                        <div class="unvisited" id="12-13"></div>
+                        <div class="unvisited" id="12-14"></div>
+                        <div class="unvisited" id="12-15"></div>
+                        <div class="unvisited" id="12-16"></div>
+                        <div class="unvisited" id="12-17"></div>
+                        <div class="unvisited" id="12-18"></div>
+                        <div class="unvisited" id="12-19"></div>
+                        <div class="unvisited" id="12-20"></div>
+                        <div class="unvisited" id="12-21"></div>
+                        <div class="unvisited" id="12-22"></div>
+                        <div class="unvisited" id="12-23"></div>
+                        <div class="unvisited" id="12-24"></div>
+                        <div class="unvisited" id="12-25"></div>
+                        <div class="unvisited" id="12-26"></div>
+                        <div class="unvisited" id="12-27"></div>
+                        <div class="unvisited" id="12-28"></div>
+                        <div class="unvisited" id="12-29"></div>
+                        <div class="unvisited" id="12-30"></div>
+                        <div class="unvisited" id="12-31"></div>
+                        <div class="unvisited" id="12-32"></div>
+                        <div class="unvisited" id="12-33"></div>
+                        <div class="unvisited" id="12-34"></div>
+                    </div>
+                    <div class="row" id="13">
+                        <div class="unvisited" id="13-0"></div>
+                        <div class="unvisited" id="13-1"></div>
+                        <div class="unvisited" id="13-2"></div>
+                        <div class="unvisited" id="13-3"></div>
+                        <div class="unvisited" id="13-4"></div>
+                        <div class="unvisited" id="13-5"></div>
+                        <div class="unvisited" id="13-6"></div>
+                        <div class="unvisited" id="13-7"></div>
+                        <div class="unvisited" id="13-8"></div>
+                        <div class="unvisited" id="13-9"></div>
+                        <div class="unvisited" id="13-10"></div>
+                        <div class="unvisited" id="13-11"></div>
+                        <div class="unvisited" id="13-12"></div>
+                        <div class="unvisited" id="13-13"></div>
+                        <div class="unvisited" id="13-14"></div>
+                        <div class="unvisited" id="13-15"></div>
+                        <div class="unvisited" id="13-16"></div>
+                        <div class="unvisited" id="13-17"></div>
+                        <div class="unvisited" id="13-18"></div>
+                        <div class="unvisited" id="13-19"></div>
+                        <div class="unvisited" id="13-20"></div>
+                        <div class="unvisited" id="13-21"></div>
+                        <div class="unvisited" id="13-22"></div>
+                        <div class="unvisited" id="13-23"></div>
+                        <div class="unvisited" id="13-24"></div>
+                        <div class="unvisited" id="13-25"></div>
+                        <div class="unvisited" id="13-26"></div>
+                        <div class="unvisited" id="13-27"></div>
+                        <div class="unvisited" id="13-28"></div>
+                        <div class="unvisited" id="13-29"></div>
+                        <div class="unvisited" id="13-30"></div>
+                        <div class="unvisited" id="13-31"></div>
+                        <div class="unvisited" id="13-32"></div>
+                        <div class="unvisited" id="13-33"></div>
+                        <div class="unvisited" id="13-34"></div>
+                    </div>
+                    <div class="row" id="14">
+                        <div class="unvisited" id="14-0"></div>
+                        <div class="unvisited" id="14-1"></div>
+                        <div class="unvisited" id="14-2"></div>
+                        <div class="unvisited" id="14-3"></div>
+                        <div class="unvisited" id="14-4"></div>
+                        <div class="unvisited" id="14-5"></div>
+                        <div class="unvisited" id="14-6"></div>
+                        <div class="unvisited" id="14-7"></div>
+                        <div class="unvisited" id="14-8"></div>
+                        <div class="unvisited" id="14-9"></div>
+                        <div class="unvisited" id="14-10"></div>
+                        <div class="unvisited" id="14-11"></div>
+                        <div class="unvisited" id="14-12"></div>
+                        <div class="unvisited" id="14-13"></div>
+                        <div class="unvisited" id="14-14"></div>
+                        <div class="unvisited" id="14-15"></div>
+                        <div class="unvisited" id="14-16"></div>
+                        <div class="unvisited" id="14-17"></div>
+                        <div class="unvisited" id="14-18"></div>
+                        <div class="unvisited" id="14-19"></div>
+                        <div class="unvisited" id="14-20"></div>
+                        <div class="unvisited" id="14-21"></div>
+                        <div class="unvisited" id="14-22"></div>
+                        <div class="unvisited" id="14-23"></div>
+                        <div class="unvisited" id="14-24"></div>
+                        <div class="unvisited" id="14-25"></div>
+                        <div class="unvisited" id="14-26"></div>
+                        <div class="unvisited" id="14-27"></div>
+                        <div class="unvisited" id="14-28"></div>
+                        <div class="unvisited" id="14-29"></div>
+                        <div class="unvisited" id="14-30"></div>
+                        <div class="unvisited" id="14-31"></div>
+                        <div class="unvisited" id="14-32"></div>
+                        <div class="unvisited" id="14-33"></div>
+                        <div class="unvisited" id="14-34"></div>
                     </div>
                 </div>
             </div>
         </div>
         <footer>Copyright &copy; 2024 Irina Mardhatillah</footer>
-        <script type="module" src="main.js"></script>
+        <script type="module" src="pathfinding.js"></script>
     </body>
 </html>
