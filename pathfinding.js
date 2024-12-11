@@ -1,4 +1,4 @@
-import { BFS } from './pathfinding_algorithms.js';
+import { BFS } from "./pathfinding_algorithms.js";
 
 const nRow = 15;
 const nCol = 35;
@@ -9,13 +9,13 @@ const goalId = "7-29";
 const randomButton = document.getElementById("random");
 const runButton = document.getElementById("run");
 
-let walls = []
+let walls = [];
 
 function generateWalls(nums = 150) {
-    walls.forEach(cell => {
+    walls.forEach((cell) => {
         cell.classList.replace("wall", "unvisited");
-    })
-    walls = []
+    });
+    walls = [];
 
     let unvisited = document.getElementsByClassName("unvisited");
     let availableCells = Array.from(unvisited);
@@ -43,7 +43,7 @@ function render(currentId) {
     if (currentId == sourceId) {
         currentCell.classList.replace("source", "visited");
     } else if (currentId == goalId) {
-        currentCell.classList.replace("goal", "visited")
+        currentCell.classList.replace("goal", "visited");
     } else {
         currentCell.classList.replace("unvisited", "visited");
     }
@@ -57,14 +57,25 @@ async function getNeighbors(currentCell) {
     let [row, col] = currentCell.split("-");
     row = parseInt(row);
     col = parseInt(col);
-    let directions = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+    let directions = [
+        [1, 0],
+        [-1, 0],
+        [0, 1],
+        [0, -1],
+    ];
     let neighbors = [];
     for (let d of directions) {
         let neighborRow = row + d[0];
         let neighborCol = col + d[1];
         let neighborId = neighborRow + "-" + neighborCol;
         let isWall = walls.find((wall) => wall.id == neighborId);
-        if (!isWall && (neighborRow >= 0) && (neighborRow < nRow) && (neighborCol >= 0) && (neighborCol < nCol)) {
+        if (
+            !isWall &&
+            neighborRow >= 0 &&
+            neighborRow < nRow &&
+            neighborCol >= 0 &&
+            neighborCol < nCol
+        ) {
             neighbors.push(neighborId);
         }
     }
@@ -81,11 +92,16 @@ runButton.addEventListener("click", async () => {
 
     switch (selectedAlgorithm) {
         case "Breadth-First Search":
-            predecessor = await BFS(sourceId, goalId, getNeighbors, async (currentCell) => {
-                render(currentCell);
-                await delay(20);
-            })
-        break
+            predecessor = await BFS(
+                sourceId,
+                goalId,
+                getNeighbors,
+                async (currentCell) => {
+                    render(currentCell);
+                    await delay(20);
+                }
+            );
+            break;
     }
 
     async function renderPath(currentId) {
@@ -100,6 +116,6 @@ runButton.addEventListener("click", async () => {
     }
 
     await renderPath(goalId);
-})
+});
 
 generateWalls();

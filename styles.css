@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 html,
 body {
@@ -6,7 +6,7 @@ body {
 }
 
 body {
-    background-color: #EDF6F7;
+    background-color: #edf6f7;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ header {
 }
 
 .logo {
-    color: #5CC0BC;
+    color: #5cc0bc;
     font-size: 1.8rem;
     text-decoration: none;
 }
@@ -41,7 +41,7 @@ header {
 }
 
 .nav:hover {
-    color: #5CC0BC;
+    color: #5cc0bc;
 }
 
 .fa-github {
@@ -51,7 +51,7 @@ header {
 }
 
 .fa-github:hover {
-    color: #5CC0BC;
+    color: #5cc0bc;
 }
 
 .wrapper {
@@ -78,7 +78,7 @@ button {
     text-align: center;
     color: #253237;
     background-color: white;
-    border: 1px solid #5CC0BC;
+    border: 1px solid #5cc0bc;
     border-radius: 5px;
     margin: -1px;
 }
@@ -91,7 +91,7 @@ select {
     color: #253237;
     background-color: white;
     border: none;
-    outline: 1px solid #5CC0BC;
+    outline: 1px solid #5cc0bc;
     border-radius: 5px;
 }
 
@@ -145,7 +145,7 @@ select::after {
 .source,
 .goal,
 .path {
-    border: 1px solid #5CC0BC;
+    border: 1px solid #5cc0bc;
 }
 
 .wall {
@@ -160,11 +160,11 @@ select::after {
 }
 
 .visited {
-    background-color: #BDE4E3;
+    background-color: #bde4e3;
 }
 
 .path {
-    background-color: #5CC0BC;
+    background-color: #5cc0bc;
 }
 
 .fa-chevron-right,

@@ -5,17 +5,17 @@ async function BFS(source, goal, neighbors, callback) {
 
     visited[source] = true;
     await callback(source);
-    
+
     let queue = [];
     queue.push(source);
 
     while (queue.length > 0) {
         let u = queue.shift();
-        
+
         if (u == goal) {
             return predecessor;
         }
-        
+
         for (let v of await neighbors(u)) {
             if (!visited[v]) {
                 visited[v] = true;
@@ -25,9 +25,8 @@ async function BFS(source, goal, neighbors, callback) {
             }
         }
     }
-    
+
     throw new Error("No path found.");
-    
 }
 
 export { BFS };

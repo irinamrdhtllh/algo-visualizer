@@ -1,19 +1,18 @@
 // Insertion sort algorithm
 async function insertionSort(nums, callback) {
     for (let i = 1; i < nums.length; i++) {
-      const key = nums[i];
-      let j = i - 1;
-      while (j >= 0 && nums[j] > key) {
-        nums[j + 1] = nums[j];
+        const key = nums[i];
+        let j = i - 1;
+        while (j >= 0 && nums[j] > key) {
+            nums[j + 1] = nums[j];
+            await callback(j + 1);
+            j--;
+        }
+        nums[j + 1] = key;
         await callback(j + 1);
-        j--;
-      }
-      nums[j + 1] = key;
-      await callback(j + 1);
     }
     await callback();
 }
-
 
 // Merge sort algorithm
 async function mergeSort(nums, callback) {
@@ -32,7 +31,7 @@ async function mergeSort(nums, callback) {
                 await callback(k);
                 i++;
             } else {
-                nums[k] = R[j]
+                nums[k] = R[j];
                 await callback(k);
                 j++;
             }
@@ -58,8 +57,8 @@ async function mergeSort(nums, callback) {
         }
         let q = Math.floor((p + r) / 2);
         await sort(nums, p, q);
-        await sort(nums, q, r)
-        await merge(nums, p, q, r)
+        await sort(nums, q, r);
+        await merge(nums, p, q, r);
     }
 
     let p = 0;
@@ -67,7 +66,6 @@ async function mergeSort(nums, callback) {
     await sort(nums, p, r);
     await callback();
 }
-
 
 // Heap sort algorithm
 async function heapSort(nums, callback) {
@@ -132,7 +130,6 @@ async function heapSort(nums, callback) {
     await callback();
 }
 
-
 // Quick sort algorithm
 async function quickSort(nums, callback) {
     async function partition(nums, p, r) {
@@ -169,7 +166,6 @@ async function quickSort(nums, callback) {
     await callback();
 }
 
-
 // Selection sort algorithm
 async function selectionSort(nums, callback) {
     for (let i = 0; i < nums.length; i++) {
@@ -185,8 +181,7 @@ async function selectionSort(nums, callback) {
         await callback(i);
         await callback(min_index);
     }
-    await callback()
+    await callback();
 }
-
 
 export { insertionSort, mergeSort, heapSort, quickSort, selectionSort };

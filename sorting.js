@@ -1,4 +1,10 @@
-import { insertionSort, mergeSort, heapSort, quickSort, selectionSort } from "./sorting_algorithms.js";
+import {
+    insertionSort,
+    mergeSort,
+    heapSort,
+    quickSort,
+    selectionSort,
+} from "./sorting_algorithms.js";
 
 const randomButton = document.getElementById("random");
 const runButton = document.getElementById("run");
@@ -39,40 +45,39 @@ randomButton.addEventListener("click", () => {
 });
 
 runButton.addEventListener("click", () => {
-    const selectedAlgorithm =
-        document.getElementById("algorithm-list").value;
+    const selectedAlgorithm = document.getElementById("algorithm-list").value;
 
     switch (selectedAlgorithm) {
         case "Insertion Sort":
-        insertionSort(nums, async (focusIndex) => {
-            render(focusIndex);
-            await delay(200);
-        });
-        break;
+            insertionSort(nums, async (focusIndex) => {
+                render(focusIndex);
+                await delay(200);
+            });
+            break;
         case "Merge Sort":
-        mergeSort(nums, async (focusIndex) => {
-            render(focusIndex);
-            await delay(200);
-        });
-        break;
+            mergeSort(nums, async (focusIndex) => {
+                render(focusIndex);
+                await delay(200);
+            });
+            break;
         case "Heap Sort":
-        heapSort(nums, async (focusIndex) => {
-            render(focusIndex);
-            await delay(200);
-        });
-        break;
+            heapSort(nums, async (focusIndex) => {
+                render(focusIndex);
+                await delay(200);
+            });
+            break;
         case "Quick Sort":
-        quickSort(nums, async (focusIndex) => {
-            render(focusIndex);
-            await delay(200);
-        });
-        break;
+            quickSort(nums, async (focusIndex) => {
+                render(focusIndex);
+                await delay(200);
+            });
+            break;
         case "Selection Sort":
-        selectionSort(nums, async (focusIndex) => {
-            render(focusIndex);
-            await delay(200);
-        });
-        break;
+            selectionSort(nums, async (focusIndex) => {
+                render(focusIndex);
+                await delay(200);
+            });
+            break;
     }
 });
 
