@@ -119,23 +119,53 @@ select::after {
     gap: 0.75rem;
 }
 
-#grid-row {
+.row {
     display: flex;
     flex-direction: row;
 }
 
-#grid-row:not(:first-child) {
+.row:not(:first-child) {
     margin-top: -1px;
 }
 
-#grid-item {
-    height: 2rem;
-    width: 2rem;
+.unvisited,
+.source,
+.goal,
+.wall {
+    height: 1.5rem;
+    width: 1.5rem;
     background-color: white;
+}
+
+.unvisited,
+.source,
+.goal {
     border: 1px solid #5CC0BC;
 }
 
-#grid-item:not(:first-child) {
+.source,
+.goal {
+    line-height: 1.5rem !important;
+    text-align: center;
+}
+
+.wall {
+    background-color: #253237;
+    border: 1px solid #253237;
+}
+
+.fa-chevron-right,
+.fa-dot-circle-o {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem !important;
+    color: #253237;
+}
+
+.unvisited:not(:first-child),
+.source:not(:first-child),
+.goal:not(:first-child),
+.wall:not(:first-child) {
     margin-left: -1px;
 }
 
