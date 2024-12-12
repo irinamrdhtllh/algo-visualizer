@@ -1,4 +1,4 @@
-import { BFS } from "./pathfinding_algorithms.js";
+import { BFS, DFS } from "./pathfinding_algorithms.js";
 
 const nRow = 15;
 const nCol = 35;
@@ -93,6 +93,17 @@ runButton.addEventListener("click", async () => {
     switch (selectedAlgorithm) {
         case "Breadth-First Search":
             predecessor = await BFS(
+                sourceId,
+                goalId,
+                getNeighbors,
+                async (currentCell) => {
+                    render(currentCell);
+                    await delay(20);
+                }
+            );
+            break;
+        case "Depth-First Search":
+            predecessor = await DFS(
                 sourceId,
                 goalId,
                 getNeighbors,
