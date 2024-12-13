@@ -136,4 +136,54 @@ async function dijkstra(source, goal, neighbors, callback) {
     throw new Error("No path found.");
 }
 
-export { BFS, DFS, dijkstra };
+// A* search algorithm
+async function AStar(source, goal, neighbors, callback) {
+    function heuristic(current, goal) {
+        let [currentRow, currentCol] = current.split("-");
+        let [goalRow, goalCol] = goal.split("-");
+        return Math.abs(currentRow - goalRow) + Math.abs(currentCol - goalCol);
+    }
+
+    let g_score = {};
+    let f_score = {};
+    let visited = {};
+    let predecessor = {};
+    let queue = new MinPriorityQueue();
+    let inQueue = new Set();
+
+    g_score[source] = 0;
+    f_score[source] = heuristic(source, goal);
+    queue.enqueue(f_score[source], source);
+    inQueue.add(source);
+
+    while (queue.size() > 0) {
+        let [_, u] = queue.dequeue();
+        visited[u] = true;
+        inQueue.add(u);
+        await callback(u);
+
+        if (u == goal) {
+            return predecessor;
+        }
+
+        for (let v of await neighbors(u)) {
+            if (!visited[v]) {
+                let tentative_g_score = g_score[u] + 1;
+                if (!g_score[v] || tentative_g_score < g_score[v]) {
+                    predecessor[v] = u;
+                    g_score[v] = tentative_g_score;
+                    f_score[v] = tentative_g_score + heuristic(v, goal);
+
+                    if (!inQueue.has(v)) {
+                        queue.enqueue(f_score[v], v);
+                        inQueue.add(v);
+                    }
+                }
+            }
+        }
+    }
+
+    throw new Error("No path found.");
+}
+
+export { BFS, DFS, dijkstra, AStar };
