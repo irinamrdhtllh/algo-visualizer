@@ -1,4 +1,4 @@
-import { BFS, DFS } from "./pathfinding_algorithms.js";
+import { BFS, DFS, dijkstra } from "./pathfinding_algorithms.js";
 
 const nRow = 15;
 const nCol = 35;
@@ -104,6 +104,17 @@ runButton.addEventListener("click", async () => {
             break;
         case "Depth-First Search":
             predecessor = await DFS(
+                sourceId,
+                goalId,
+                getNeighbors,
+                async (currentCell) => {
+                    render(currentCell);
+                    await delay(20);
+                }
+            );
+            break;
+        case "Dijkstra":
+            predecessor = await dijkstra(
                 sourceId,
                 goalId,
                 getNeighbors,

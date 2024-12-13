@@ -1,3 +1,32 @@
+class MinPriorityQueue {
+    constructor() {
+        this.queue = [];
+    }
+
+    enqueue(priority, value) {
+        let enqueued = false;
+        for (let i = 0; i < this.queue.length; i++) {
+            let ithPriority = this.queue[i][0];
+            if (ithPriority > priority) {
+                this.queue.splice(i, 0, [priority, value]);
+                enqueued = true;
+                break;
+            }
+        }
+        if (!enqueued) {
+            this.queue.push([priority, value]);
+        }
+    }
+
+    dequeue() {
+        return this.queue.shift();
+    }
+
+    size() {
+        return this.queue.length;
+    }
+}
+
 // Breadth-first search
 async function BFS(source, goal, neighbors, callback) {
     let visited = {};
@@ -67,4 +96,44 @@ async function DFS(source, goal, neighbors, callback) {
     }
 }
 
-export { BFS, DFS };
+// Dijkstra's algorithm
+async function dijkstra(source, goal, neighbors, callback) {
+    let distance = {};
+    let predecessor = {};
+    let visited = {};
+    let queue = new MinPriorityQueue();
+
+    distance[source] = 0;
+    queue.enqueue(distance[source], source);
+
+    while (queue.size() > 0) {
+        let [_, u] = queue.dequeue();
+        visited[u] = true;
+        await callback(u);
+
+        if (u == goal) {
+            return predecessor;
+        }
+
+        for (let v of await neighbors(u)) {
+            let old_distance = distance[v];
+            if (!old_distance) {
+                distance[v] = distance[u] + 1;
+                predecessor[v] = u;
+                queue.enqueue(distance[v], v);
+            } else {
+                if (distance[v] > distance[u] + 1) {
+                    distance[v] = distance[u] + 1;
+                    predecessor[v] = u;
+                    if (distance[v] < old_distance) {
+                        queue.enqueue(distance[v], v);
+                    }
+                }
+            }
+        }
+    }
+
+    throw new Error("No path found.");
+}
+
+export { BFS, DFS, dijkstra };
