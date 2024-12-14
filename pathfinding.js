@@ -8,6 +8,7 @@ const goalId = "7-29";
 
 const randomButton = document.getElementById("random");
 const runButton = document.getElementById("run");
+const clearButton = document.getElementById("clear");
 
 let walls = [];
 
@@ -16,6 +17,23 @@ function generateWalls(nums = 150) {
         cell.classList.replace("wall", "unvisited");
     });
     walls = [];
+
+    let visited = Array.from(document.getElementsByClassName("visited"));
+    visited.forEach((cell) => {
+        cell.classList.replace("visited", "unvisited");
+    });
+
+    let path = Array.from(document.getElementsByClassName("path"));
+    path.forEach((cell) => {
+        console.log(cell.id);
+        if (String(cell.id) !== sourceId && String(cell.id) !== goalId) {
+            cell.classList.replace("path", "unvisited");
+        } else if (String(cell.id) === sourceId) {
+            cell.classList.replace("path", "source");
+        } else {
+            cell.classList.replace("path", "goal");
+        }
+    });
 
     let unvisited = document.getElementsByClassName("unvisited");
     let availableCells = Array.from(unvisited);
@@ -36,6 +54,25 @@ function generateWalls(nums = 150) {
     for (let cell of walls) {
         cell.classList.replace("unvisited", "wall");
     }
+}
+
+function clearBoard() {
+    let visited = Array.from(document.getElementsByClassName("visited"));
+    visited.forEach((cell) => {
+        cell.classList.replace("visited", "unvisited");
+    });
+
+    let path = Array.from(document.getElementsByClassName("path"));
+    path.forEach((cell) => {
+        console.log(cell.id);
+        if (String(cell.id) !== sourceId && String(cell.id) !== goalId) {
+            cell.classList.replace("path", "unvisited");
+        } else if (String(cell.id) === sourceId) {
+            cell.classList.replace("path", "source");
+        } else {
+            cell.classList.replace("path", "goal");
+        }
+    });
 }
 
 function render(currentId) {
@@ -84,6 +121,10 @@ async function getNeighbors(currentCell) {
 
 randomButton.addEventListener("click", () => {
     generateWalls();
+});
+
+clearButton.addEventListener("click", () => {
+    clearBoard();
 });
 
 runButton.addEventListener("click", async () => {
