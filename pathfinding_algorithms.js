@@ -117,17 +117,11 @@ async function dijkstra(source, goal, neighbors, callback) {
 
         for (let v of await neighbors(u)) {
             let old_distance = distance[v];
-            if (!old_distance) {
+            if (!old_distance || old_distance > distance[u] + 1) {
                 distance[v] = distance[u] + 1;
                 predecessor[v] = u;
-                queue.enqueue(distance[v], v);
-            } else {
-                if (distance[v] > distance[u] + 1) {
-                    distance[v] = distance[u] + 1;
-                    predecessor[v] = u;
-                    if (distance[v] < old_distance) {
-                        queue.enqueue(distance[v], v);
-                    }
+                if (!old_distance || distance[v] < old_distance) {
+                    queue.enqueue(distance[v], v);
                 }
             }
         }
