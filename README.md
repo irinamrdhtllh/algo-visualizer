@@ -14,3 +14,5 @@
 - Depth-first search (DFS)
 - Dijkstra's algorithm
 - A* search algorithm
+
+The application is hosted online and can be accessed [here](https://algovisualization.vercel.app/).
