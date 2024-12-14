@@ -56,7 +56,8 @@ header {
 }
 
 .wrapper {
-    padding: 4rem;
+    padding: 10vh;
+    gap: 4rem;
     display: flex;
     flex-grow: 1;
     flex-direction: column;

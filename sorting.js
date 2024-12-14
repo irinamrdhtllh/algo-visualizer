@@ -24,8 +24,8 @@ function render(focusIndex) {
     for (let i = 0; i < nums.length; i++) {
         const num = nums[i];
         const div = document.createElement("div");
-        div.style.width = "42px";
-        div.style.height = `${18 * num}px`;
+        div.style.width = "2.75vw";
+        div.style.height = `${2.5 * num}vh`;
         div.style.border = "1px solid #5CC0BC";
         if (i == focusIndex) {
             div.style.background = "#5CC0BC";
