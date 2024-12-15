@@ -25,7 +25,6 @@ function generateWalls(nums = 150) {
 
     let path = Array.from(document.getElementsByClassName("path"));
     path.forEach((cell) => {
-        console.log(cell.id);
         if (String(cell.id) !== sourceId && String(cell.id) !== goalId) {
             cell.classList.replace("path", "unvisited");
         } else if (String(cell.id) === sourceId) {
@@ -64,7 +63,6 @@ function clearBoard() {
 
     let path = Array.from(document.getElementsByClassName("path"));
     path.forEach((cell) => {
-        console.log(cell.id);
         if (String(cell.id) !== sourceId && String(cell.id) !== goalId) {
             cell.classList.replace("path", "unvisited");
         } else if (String(cell.id) === sourceId) {
